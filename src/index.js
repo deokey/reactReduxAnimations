@@ -21,7 +21,23 @@ const initialState = {};
 // 5. creamos un reducer
 // es una funcion que se usa para hacer cambios al estado
 // reducer(state,action)
-function reducer(state, action) {
+
+// function reducer(state, action) {
+//   switch (action.type) {
+//     case 'UPDATE_PROPS': {
+//       const newProps = action.payload.props;
+//       console.log(state, action, newProps);
+//       return {
+//         ...state,
+//         ...newProps
+//       };
+//     }
+//     default:
+//       return state;
+//   }
+// }
+
+const reducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_PROPS': {
       const newProps = action.payload.props;
@@ -34,7 +50,7 @@ function reducer(state, action) {
     default:
       return state;
   }
-}
+};
 
 // 3. instanciamos el store y lo agregamos al Provider como atributo
 // createStore(reducer, initialState)
