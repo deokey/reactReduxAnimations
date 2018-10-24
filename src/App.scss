@@ -1,5 +1,16 @@
 @import 'sass/variables';
 @import 'sass/colors';
-@import 'sass/reset';
-@import 'sass/general';
+
+@import 'sass/mixins';
+
+@import 'sass/resets';
+
+@import 'sass/generals';
+
+@import 'sass/flexbox';
+@import 'sass/grids';
+
+@import 'sass/buttons';
+@import 'sass/links';
+
 @import 'sass/animations';

@@ -16,6 +16,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  transition: 1s;
+  will-change: background-color;
+  @include mobile {
+    background-color: #007ea0;
+  }
 }
 
 .App-link {
@@ -28,5 +33,18 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@include mobile {
+  .App-logo {
+    animation: App-logo-spin infinite 2s alternate;
+  }
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg) scale(0.7);
+    }
+    to {
+      transform: rotate(360deg) scale(1);
+    }
   }
 }
