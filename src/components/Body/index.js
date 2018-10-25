@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../../logo.svg';
+import Heart from '../Shared/Heart';
 export default class index extends Component {
   render() {
     return (
@@ -16,6 +17,7 @@ export default class index extends Component {
         >
           Learn React
         </a>
+        <Heart />
       </div>
     );
   }
