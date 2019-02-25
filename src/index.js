@@ -47,6 +47,14 @@ const reducer = (state, action) => {
         ...newProps
       };
     }
+    case 'GREW': {
+      const newProps = action.payload.props;
+      console.log(state, action, newProps);
+      return {
+        ...state,
+        ...newProps
+      };
+    }
     default:
       return state;
   }
@@ -64,6 +72,24 @@ cheet('a s d', () => {
     type: 'UPDATE_PROPS',
     payload: {
       props: { token: Math.random() }
+    }
+  });
+});
+
+cheet('a a a', () => {
+  store.dispatch({
+    type: 'GREW',
+    payload: {
+      props: { grow: true }
+    }
+  });
+});
+
+cheet('s s s', () => {
+  store.dispatch({
+    type: 'GREW',
+    payload: {
+      props: { grow: false }
     }
   });
 });
